@@ -1,0 +1,18 @@
+<p>listado</p>
+
+<ul>
+    <li *ngFor="let x of exs; let i = index"> {{ i + 1 }} - {{ x }} </li>
+</ul>
+
+
+
+<button (click)="eliminarArray()">Eliminar</button>
+
+<div *ngIf="exBorrado; else noBorrado">
+    <h3> Ex Eliminado: <small> {{ exBorrado }} </small> </h3>
+
+</div>
+
+<ng-template #noBorrado>
+    <h3> No ha borrado nada</h3>
+</ng-template>
